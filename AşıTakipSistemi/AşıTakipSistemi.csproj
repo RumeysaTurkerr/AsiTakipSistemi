@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E4521604-7645-4698-B66F-16054A0B0AF8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AşıTakipSistemi</RootNamespace>
+    <AssemblyName>AşıTakipSistemi</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AsiBilgiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AsiBilgiForm.Designer.cs">
+      <DependentUpon>AsiBilgiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AsiTakvimiEkleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AsiTakvimiEkleForm.Designer.cs">
+      <DependentUpon>AsiTakvimiEkleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CocukGuncelleSilForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CocukGuncelleSilForm.designer.cs">
+      <DependentUpon>CocukGuncelleSilForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoktorEkleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoktorEkleForm.Designer.cs">
+      <DependentUpon>DoktorEkleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoktorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoktorForm.designer.cs">
+      <DependentUpon>DoktorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoktorGuncelleSilForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoktorGuncelleSilForm.designer.cs">
+      <DependentUpon>DoktorGuncelleSilForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EbeveynForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EbeveynForm.Designer.cs">
+      <DependentUpon>EbeveynForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileHelper.cs" />
+    <Compile Include="GirişForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GirişForm.Designer.cs">
+      <DependentUpon>GirişForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CocukEkleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CocukEkleForm.Designer.cs">
+      <DependentUpon>CocukEkleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712241006139_NewMigration.cs" />
+    <Compile Include="Migrations\201712241006139_NewMigration.Designer.cs">
+      <DependentUpon>201712241006139_NewMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\Context\AsiTakipContext.cs" />
+    <Compile Include="Model\Entity\asiTable.cs" />
+    <Compile Include="Model\Entity\cocukTable.cs" />
+    <Compile Include="Model\Entity\doktorTable.cs" />
+    <Compile Include="Model\Entity\sekreterTable.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Schema\CocukSchema.cs" />
+    <Compile Include="SekreterEkleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SekreterEkleForm.Designer.cs">
+      <DependentUpon>SekreterEkleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SekreterGuncelleSilForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SekreterGuncelleSilForm.designer.cs">
+      <DependentUpon>SekreterGuncelleSilForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SekreterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SekreterForm.Designer.cs">
+      <DependentUpon>SekreterForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AsiBilgiForm.resx">
+      <DependentUpon>AsiBilgiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AsiTakvimiEkleForm.resx">
+      <DependentUpon>AsiTakvimiEkleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CocukGuncelleSilForm.resx">
+      <DependentUpon>CocukGuncelleSilForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoktorEkleForm.resx">
+      <DependentUpon>DoktorEkleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoktorForm.resx">
+      <DependentUpon>DoktorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoktorGuncelleSilForm.resx">
+      <DependentUpon>DoktorGuncelleSilForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EbeveynForm.resx">
+      <DependentUpon>EbeveynForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GirişForm.resx">
+      <DependentUpon>GirişForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CocukEkleForm.resx">
+      <DependentUpon>CocukEkleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712241006139_NewMigration.resx">
+      <DependentUpon>201712241006139_NewMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="SekreterEkleForm.resx">
+      <DependentUpon>SekreterEkleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SekreterGuncelleSilForm.resx">
+      <DependentUpon>SekreterGuncelleSilForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SekreterForm.resx">
+      <DependentUpon>SekreterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Schema\CocukSchema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

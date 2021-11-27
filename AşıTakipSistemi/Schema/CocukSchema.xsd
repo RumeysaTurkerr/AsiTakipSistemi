@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CocukSchema"
+    targetNamespace="http://tempuri.org/CocukSchema.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/CocukSchema.xsd"
+    xmlns:mstns="http://tempuri.org/CocukSchema.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:element name="CocukSchema">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Cocuk" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:int" />
+              <xs:element name="TC" type="xs:string" />
+              <xs:element name="Şifre" type="xs:string" />
+              <xs:element name="Cinsiyet" type="xs:string" />
+              <xs:element name="Ad" type="xs:string" />
+              <xs:element name="Soyad" type="xs:string" />
+              <xs:element name="DoğumTarihi" type="xs:dateTime" />
+              <xs:element name="Kilo" type="xs:double" />
+              <xs:element name="Boy" type="xs:double" />
+
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
